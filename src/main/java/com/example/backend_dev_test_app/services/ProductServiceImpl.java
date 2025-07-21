@@ -21,6 +21,10 @@ public class ProductServiceImpl implements IProductService {
     private final RestTemplate restTemplate = new RestTemplate();
     private final String url = "http://localhost:3001";
 
+    public RestTemplate getRestTemplate() {
+        return this.restTemplate;
+    }
+
     @Override
     public List<Product> getSimilarProducts(String productId) {
         String[] similarIds;
